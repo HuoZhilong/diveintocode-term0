@@ -3,6 +3,7 @@ import csv,operator
 def CSV_READER(str_path):
     try:
         CSV_file = open(str_path, "r", encoding="ms932", errors="", newline="" )
+        # 正常にオーブンした場合
         if CSV_file is not None:
             print('CSVファイルの読み取りに成功しました。')
             f = csv.reader(CSV_file, delimiter=",", doublequote=True,
@@ -13,7 +14,7 @@ def CSV_READER(str_path):
             print(' '.join(Header))
             for row in Row_datas:
                 print(' '.join(row))
-        # 内容読み取れない時
+        # 正常にオーブンできなかった場合
         else:
             print('CSVファイルが空もしくはファイルの読み取りに失敗しました。')
     except Exception as e:
