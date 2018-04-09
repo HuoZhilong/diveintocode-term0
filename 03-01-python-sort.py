@@ -13,6 +13,7 @@ def CSV_READER(str_path):
             print(' '.join(Header))
             for row in Row_datas:
                 print(' '.join(row))
+        # 内容読み取れない時
         else:
             print('CSVファイルが空もしくはファイルの読み取りに失敗しました。')
     except Exception as e:
