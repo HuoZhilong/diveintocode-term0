@@ -9,6 +9,7 @@ def CSV_READER(str_path):
             f = csv.reader(CSV_file, delimiter=",", doublequote=True,
                             lineterminator="\r\n", quotechar='"',
                             skipinitialspace=True)
+            # 1行目のヘッダーを取得
             Header = next(f)
             Row_datas = sorted(f,key=operator.itemgetter(1))
             print(' '.join(Header))
