@@ -31,6 +31,8 @@ def CSV_READER(path):
             print('CSVファイルの読み取りが失敗しました。。')
     except Exception as e:
         print('予期せぬエラーが発生しました。原因は' + str(e))
+    finally:
+        CSV_file.close()
 
 
 CSV_READER('./sample.csv')
